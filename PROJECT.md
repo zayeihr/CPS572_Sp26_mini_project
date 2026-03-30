@@ -107,6 +107,13 @@ Upload your report as a single PDF. It must include:
    - What you used them for (code writing, debugging, brainstorming, data generation, etc.)
    - Which specific parts of your code or approach were LLM-assisted
 
+5. **Tinker Feedback** — Please answer the following questions about your experience with the Tinker platform:
+   - What was the hardest part of using Tinker? Where did you get stuck?
+   - Did you use the [tinker-cookbook](https://github.com/thinking-machines-lab/tinker-cookbook)? If yes, what was helpful and what was missing? If no, why not?
+   - What is the one thing that would make Tinker significantly better for your use case?
+   - Would you use Tinker again? Why or why not?
+
+
 ### 3. Code (ZIP)
 Upload a ZIP file containing all of your training code. This should include everything needed to understand and reproduce your approach.
 
