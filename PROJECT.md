@@ -113,6 +113,8 @@ Upload your report as a single PDF. It must include:
    - What is the one thing that would make Tinker significantly better for your use case?
    - Would you use Tinker again? Why or why not?
 
+**Page Limit:** The main content of your report is limited to **4 pages**. Please note that the *LLM Usage* and *Tinker Feedback* sections do **not** count towards this limit.
+
 
 ### 3. Code (ZIP)
 Upload a ZIP file containing all of your training code. This should include everything needed to understand and reproduce your approach.
