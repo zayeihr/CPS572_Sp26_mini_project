@@ -1,0 +1,19 @@
+{
+  "checkpoint_path": "tinker://b3af5f32-f7c1-50a6-b0cb-0ffbbffbc7a5:train:0/sampler_weights/sft_8b_v2",
+  "base_model": "meta-llama/Llama-3.1-8B",
+  "renderer_name": "role_colon",
+  "training": {
+    "num_steps": 1000,
+    "batch_size": 4,
+    "learning_rate": 0.0001,
+    "lora_rank": 32,
+    "max_length": 1024,
+    "data_mix": {
+      "math": 5000,
+      "instruction_following": 2000,
+      "code": 6000
+    },
+    "final_loss": 0.6745011703307616
+  },
+  "published": true
+}
