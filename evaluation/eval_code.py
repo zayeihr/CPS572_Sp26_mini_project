@@ -32,6 +32,10 @@ TASK = "inspect_evals/humaneval"
 
 
 async def run(args):
+    venv = os.environ.get("VIRTUAL_ENV")
+    if venv:
+        os.environ["PATH"] = os.path.join(venv, "bin") + os.pathsep + os.environ.get("PATH", "")
+
     renderer_name = args.renderer_name or get_recommended_renderer_name(args.base_model)
     logger.info(f"Model: {args.base_model} | Renderer: {renderer_name}")
 
@@ -66,7 +70,7 @@ async def run(args):
         retry_on_error=5,
         fail_on_error=False,
         log_dir=log_dir,
-        max_connections=512,
+        max_connections=16,
     )
 
     # Extract aggregate metrics

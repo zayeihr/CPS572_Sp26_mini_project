@@ -231,9 +231,12 @@ def main():
 
     # ── Save & publish ─────────────────────────────────────────────────────────
     print(f"\nSaving checkpoint '{args.checkpoint_name}'...")
-    ckpt            = tc.save_weights_for_sampler(name=args.checkpoint_name).result()
-    checkpoint_path = ckpt.path
-    print(f"  Checkpoint saved: {checkpoint_path}")
+    state_ckpt      = tc.save_state(name=f"{args.checkpoint_name}_state").result()
+    sampler_ckpt    = tc.save_weights_for_sampler(name=args.checkpoint_name).result()
+    state_path      = state_ckpt.path
+    checkpoint_path = sampler_ckpt.path
+    print(f"  State checkpoint saved: {state_path}")
+    print(f"  Sampler checkpoint saved: {checkpoint_path}")
 
     if not args.no_publish:
         print("\nPublishing checkpoint...")
@@ -245,6 +248,7 @@ def main():
 
     info = {
         "checkpoint_path": checkpoint_path,
+        "state_path":      state_path,
         "base_model":      args.model,
         "renderer_name":   renderer_name,
         "training": {

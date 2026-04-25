@@ -1,5 +1,6 @@
 {
-  "checkpoint_path": "tinker://7ac4a5cd-d551-5adb-a4f8-d51a83fec116:train:0/sampler_weights/sft_8b_curriculum_v2",
+  "checkpoint_path": "tinker://df3f93ee-9398-51ed-a18e-b57aaa5606c5:train:0/sampler_weights/sft_8b_curriculum",
+  "state_path": "tinker://df3f93ee-9398-51ed-a18e-b57aaa5606c5:train:0/weights/sft_8b_curriculum_state",
   "base_model": "meta-llama/Llama-3.1-8B",
   "renderer_name": "role_colon",
   "training": {
@@ -19,7 +20,7 @@
     "batch_size": 4,
     "learning_rate": 0.0001,
     "lora_rank": 32,
-    "final_loss": 0.8011344143105551
+    "final_loss": 0.7998643773285864
   },
   "published": true
 }
